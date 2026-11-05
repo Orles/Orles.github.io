@@ -1,0 +1,30 @@
+:root {
+  --bg-color: #f4f1ea;
+  --text-color: #16140f;
+  --muted-color: #5f5a4f;
+  --line-color: #d3cdc0;
+  --accent-color: #c8350f;
+  --font-mono: ui-monospace, 'Cascadia Code', consolas, monospace;
+  --gutter: clamp(16px, 4vw, 48px);
+
+  color-scheme: light;
+}
+
+// Тёмная тема только на экране, чтобы PDF всегда был светлым
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #14130f;
+    --text-color: #f1ede3;
+    --muted-color: #a8a294;
+    --line-color: #35322a;
+    --accent-color: #ff7a4d;
+
+    color-scheme: dark;
+  }
+}
+
+@media print {
+  :root {
+    --bg-color: #fff;
+  }
+}

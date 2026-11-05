@@ -1,0 +1,10 @@
+{% import "utils.njk" as utils %}
+<header class='header container'>
+  <a class='header__name' href='/'>{{ resume.profile.name }}</a>
+  <nav class='header__nav' aria-label='Разделы страницы'>
+    <a class='header__link' href='#projects'>Проекты</a>
+    <a class='header__link' href='#contacts'>Контакты</a>
+    <button class='header__link js-print' type='button'>Сохранить в PDF</button>
+  </nav>
+  <button class='header__burger js-mobile-menu-trigger' type='button' aria-label='Открыть меню'>{{ utils.svg('', 'burger', '28', '28', '', 'aria-hidden="true"') }}</button>
+</header>

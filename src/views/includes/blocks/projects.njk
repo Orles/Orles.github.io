@@ -1,0 +1,28 @@
+{% import "utils.njk" as utils %}
+{% macro projectBody(project) %}
+  <p class='project__meta'>
+    <span>{{ project.year }}</span>
+    <span>{{ project.kind }}</span>
+  </p>
+  <div class='project__body'>
+    <h3 class='project__name'>{{ project.name }}</h3>
+    <p class='project__description'>{{ project.description }}</p>
+    <p class='project__tags'>{{ project.tags | join(' · ') }}</p>
+  </div>
+{% endmacro %}
+<section id='projects' class='section' aria-labelledby='projects-title'>
+  <h2 id='projects-title' class='section__title'>Проекты</h2>
+  <ul class='projects'>
+    {% for project in resume.projects %}
+      <li class='projects__item'>
+        {% if project.url %}
+          <a class='project project_link' href='{{ project.url }}'>{{ projectBody(project) }} {{ utils.svg('', 'arrow', '28', '28', 'project__icon', 'aria-hidden="true"') }}</a>
+        {% else %}
+          <div class='project'>
+            {{ projectBody(project) }}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>

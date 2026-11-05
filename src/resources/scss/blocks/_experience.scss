@@ -1,0 +1,41 @@
+.experience {
+  &__item {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 7fr);
+    gap: 8px 24px;
+    break-inside: avoid;
+  }
+
+  &__item + &__item {
+    margin-top: 32px;
+  }
+
+  &__period,
+  &__company {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted-color);
+  }
+
+  &__period {
+    padding-top: 0.5em;
+  }
+
+  &__position {
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+
+  &__description {
+    max-width: 38em;
+    margin-top: 8px;
+  }
+
+  @media (width <= 720px) {
+    &__item {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

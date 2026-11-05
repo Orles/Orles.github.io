@@ -1,0 +1,14 @@
+{% import "utils.njk" as utils %}
+<section id='contacts' class='section' aria-labelledby='contacts-title'>
+  <h2 id='contacts-title' class='section__title'>Контакты</h2>
+  <ul class='contacts'>
+    {% for contact in resume.contacts %}
+      <li>
+        <a class='contacts__link' href='{{ contact.url }}'>
+          <span class='contacts__label'>{{ contact.label }}</span>
+          <span class='contacts__value'>{{ contact.value }} {{ utils.svg('', 'arrow', '32', '32', 'contacts__icon', 'aria-hidden="true"') }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,17 @@
+{% if resume.experience.length %}
+  <section id='experience' class='section' aria-labelledby='experience-title'>
+    <h2 id='experience-title' class='section__title'>Опыт</h2>
+    <ul class='experience'>
+      {% for job in resume.experience %}
+        <li class='experience__item'>
+          <p class='experience__period'>{{ job.period }}</p>
+          <div>
+            <h3 class='experience__position'>{{ job.position }}</h3>
+            <p class='experience__company'>{{ job.company }}</p>
+            <p class='experience__description'>{{ job.description }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

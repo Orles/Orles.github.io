@@ -1,0 +1,30 @@
+/* stylelint-disable selector-class-pattern */
+.mobile-menu {
+  &.mm-menu {
+    --mm-color-background: var(--bg-color);
+    --mm-color-text: var(--text-color);
+    --mm-color-text-dimmed: var(--muted-color);
+    --mm-color-border: var(--line-color);
+    --mm-color-button: var(--muted-color);
+    --mm-color-background-highlight: var(--line-color);
+    --mm-color-background-emphasis: var(--line-color);
+    --mm-color-focusring: var(--accent-color);
+    --mm-color-icon: var(--muted-color);
+  }
+
+  &__print {
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+/* stylelint-enable selector-class-pattern */

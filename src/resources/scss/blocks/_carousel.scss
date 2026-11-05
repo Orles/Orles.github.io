@@ -1,0 +1,83 @@
+.carousel {
+  min-width: 0;
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    border: 1px solid var(--line-color);
+  }
+
+  &__meta,
+  &__tags {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted-color);
+  }
+
+  &__name {
+    margin-top: 32px;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  &__description {
+    margin-block: 8px 16px;
+  }
+
+  &__tags {
+    margin-top: auto;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  // Селекторы удвоены, чтобы перебить абсолютное позиционирование из стилей Swiper
+  /* stylelint-disable-next-line selector-class-pattern */
+  &__pagination.carousel__pagination {
+    --swiper-pagination-color: var(--accent-color);
+    --swiper-pagination-bullet-inactive-color: var(--muted-color);
+
+    position: static;
+    width: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  &__button.carousel__button {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background: none;
+    border: 1px solid var(--line-color);
+    cursor: pointer;
+    transition:
+      color 0.15s,
+      border-color 0.15s;
+
+    &:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+    }
+  }
+}

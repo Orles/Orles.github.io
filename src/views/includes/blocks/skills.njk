@@ -1,0 +1,17 @@
+<section id='skills' class='section' aria-labelledby='skills-title'>
+  <h2 id='skills-title' class='section__title'>Стек</h2>
+  <div class='skills'>
+    {% for group in resume.skills %}
+      <div class='skills__group'>
+        <h3 class='skills__title'>{{ group.title }}</h3>
+        <ul class='skills__list'>
+          {% for item in group.items %}
+            <li>
+              {{ item }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</section>

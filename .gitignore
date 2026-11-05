@@ -1,0 +1,4 @@
+_site
+node_modules
+.11ty-vite
+.idea

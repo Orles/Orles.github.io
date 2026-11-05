@@ -1,0 +1,51 @@
+.contacts {
+  display: grid;
+  gap: 24px;
+
+  &__link {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  &__label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--muted-color);
+  }
+
+  &__value {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    font-size: clamp(28px, 6vw, 72px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
+    transition: color 0.15s;
+  }
+
+  &__link:hover &__value {
+    color: var(--accent-color);
+  }
+
+  @media print {
+    gap: 4px;
+
+    &__label {
+      font-size: 11px;
+    }
+
+    &__value {
+      font-size: 14px;
+      letter-spacing: normal;
+    }
+
+    &__icon {
+      display: none;
+    }
+  }
+}

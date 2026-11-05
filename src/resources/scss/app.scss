@@ -1,0 +1,19 @@
+// common
+@use 'common/fonts';
+@use 'common/reset';
+@use 'common/swiper';
+@use 'common/mmenu';
+@use 'common/variables';
+@use 'common/page';
+
+// blocks
+@use 'blocks/header';
+@use 'blocks/mobile-menu';
+@use 'blocks/carousel';
+@use 'blocks/footer';
+@use 'blocks/hero';
+@use 'blocks/section';
+@use 'blocks/skills';
+@use 'blocks/projects';
+@use 'blocks/experience';
+@use 'blocks/contacts';

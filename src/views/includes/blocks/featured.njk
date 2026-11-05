@@ -1,0 +1,29 @@
+{% import "utils.njk" as utils %}
+<section
+  id='featured'
+  class='section section_featured'
+  aria-labelledby='featured-title'
+>
+  <h2 id='featured-title' class='section__title'>Избранное</h2>
+  <div class='carousel js-carousel'>
+    <div class='swiper'>
+      <div class='swiper-wrapper'>
+        {% for project in resume.projects %}
+          {% if project.featured %}
+            <article class='swiper-slide carousel__slide'>
+              <p class='carousel__meta'>{{ project.year }} · {{ project.kind }}</p>
+              <h3 class='carousel__name'>{{ project.name }}</h3>
+              <p class='carousel__description'>{{ project.description }}</p>
+              <p class='carousel__tags'>{{ project.tags | join(' · ') }}</p>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class='carousel__controls'>
+      <div class='swiper-pagination carousel__pagination'></div>
+      <button class='swiper-button-prev carousel__button' type='button' aria-label='Предыдущий проект'>{{ utils.svg('', 'chevron-left', '24', '24', '', 'aria-hidden="true"') }}</button>
+      <button class='swiper-button-next carousel__button' type='button' aria-label='Следующий проект'>{{ utils.svg('', 'chevron-right', '24', '24', '', 'aria-hidden="true"') }}</button>
+    </div>
+  </div>
+</section>

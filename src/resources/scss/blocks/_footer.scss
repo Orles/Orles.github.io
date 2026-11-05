@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 24px;
+  padding-block: 32px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted-color);
+
+  &__link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}

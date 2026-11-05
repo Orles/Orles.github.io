@@ -1,0 +1,46 @@
+<!doctype html>
+<html class='page' lang='ru'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{{ title }}</title>
+    <meta name='description' content='{{ resume.profile.description }}' />
+    <meta property='og:type' content='profile' />
+    <meta property='og:title' content='{{ title }}' />
+    <meta
+      property='og:description'
+      content='{{ resume.profile.description }}'
+    />
+    <link rel='icon' href='/icons/favicon.svg' type='image/svg+xml' />
+    <link rel='stylesheet' href='/src/resources/scss/app.scss' />
+    <script type='module' src='/src/resources/ts/app.ts'></script>
+  </head>
+  <body class='page__body'>
+    <div class='js-page'>
+      {% include 'blocks/header.njk' %}
+      <main class='container'>{{ content | safe }}</main>
+      {% include 'blocks/footer.njk' %}
+    </div>
+    <nav class='mobile-menu js-mobile-menu' hidden>
+      <ul>
+        <li>
+          <a href='#featured'>Избранное</a>
+        </li>
+        <li>
+          <a href='#skills'>Стек</a>
+        </li>
+        <li>
+          <a href='#projects'>Проекты</a>
+        </li>
+        <li>
+          <a href='#contacts'>Контакты</a>
+        </li>
+        <li>
+          <button class='mobile-menu__print js-print' type='button'>
+            Сохранить в PDF
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
