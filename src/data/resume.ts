@@ -40,9 +40,9 @@ export const profile: Profile = {
   firstName: 'Иван',
   lastName: 'Орлов',
   role: 'Веб-разработчик',
-  lead: 'Делаю сайты и веб-приложения целиком: pixel perfect вёрстка, фронтенд на Vue и React, бэкенд на Laravel и NestJS.',
+  lead: 'Делаю сайты и веб-приложения целиком: pixel perfect вёрстка, фронтенд на Vue и React, бэкенд на Laravel и NestJS, Telegram-боты.',
   description:
-    'Иван Орлов, веб-разработчик. TypeScript, Vue, React, Laravel, NestJS и Eleventy.',
+    'Иван Орлов, веб-разработчик. TypeScript, Vue, React, Laravel, NestJS, Eleventy и Telegram-боты.',
 };
 
 export const skills: SkillGroup[] = [
@@ -70,6 +70,16 @@ export const skills: SkillGroup[] = [
     items: ['Eleventy', 'Nunjucks', 'Vite', 'ESLint', 'Stylelint', 'Prettier'],
   },
   {
+    title: 'Telegram-боты',
+    items: [
+      'Python',
+      'aiogram',
+      'Telegram Bot API',
+      'SQLAlchemy',
+      'Напоминания и уведомления',
+    ],
+  },
+  {
     title: 'Бэкенд и деплой',
     items: [
       'Laravel',
@@ -90,6 +100,14 @@ export const skills: SkillGroup[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    name: 'Бот записи в барбершоп',
+    year: '2026',
+    kind: 'Telegram-бот',
+    description:
+      'Онлайн-запись в сеть барбершопов: выбор услуги, мастера и свободного времени, перенос и отмена, напоминания за сутки и за 2 часа, заявки владельцу и сбор оценок.',
+    tags: ['Python', 'aiogram', 'SQLAlchemy', 'PostgreSQL', 'Docker'],
+  },
   {
     name: '11ty-template',
     year: '2026',
