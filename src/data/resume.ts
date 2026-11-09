@@ -40,9 +40,9 @@ export const profile: Profile = {
   firstName: 'Иван',
   lastName: 'Орлов',
   role: 'Веб-разработчик',
-  lead: 'Делаю сайты и веб-приложения: pixel perfect вёрстка, фронтенд на Vue и React и интеграция с Laravel.',
+  lead: 'Делаю сайты и веб-приложения целиком: pixel perfect вёрстка, фронтенд на Vue и React, бэкенд на Laravel и NestJS.',
   description:
-    'Иван Орлов, веб-разработчик. TypeScript, Vue, React, Laravel и Eleventy.',
+    'Иван Орлов, веб-разработчик. TypeScript, Vue, React, Laravel, NestJS и Eleventy.',
 };
 
 export const skills: SkillGroup[] = [
@@ -71,7 +71,21 @@ export const skills: SkillGroup[] = [
   },
   {
     title: 'Бэкенд и деплой',
-    items: ['Laravel', 'OpenCart', 'Docker', 'Docker Compose', 'pm2'],
+    items: [
+      'Laravel',
+      'Node.js',
+      'NestJS',
+      'Express',
+      'PostgreSQL',
+      'MongoDB',
+      'TypeORM',
+      'REST API',
+      'JWT',
+      'Docker',
+      'Docker Compose',
+      'pm2',
+      'OpenCart',
+    ],
   },
 ];
 
@@ -284,6 +298,22 @@ export const projects: Project[] = [
     description:
       'Виджет опций цены: выбор цвета и сохранение значений в адресе страницы.',
     tags: ['JavaScript', 'Vue'],
+  },
+  {
+    name: 'Бэкенд сервиса вишлистов',
+    year: '2024',
+    kind: 'Проектная работа',
+    description:
+      'REST API на NestJS: пользователи, вишлисты, подарки и сборы, авторизация по JWT, документация в Swagger.',
+    tags: ['NestJS', 'TypeORM', 'PostgreSQL', 'JWT'],
+  },
+  {
+    name: 'Бэкенд «Места»',
+    year: '2024',
+    kind: 'Проектная работа',
+    description:
+      'API на Express и MongoDB: пользователи и карточки, авторизация, валидация запросов и логирование.',
+    tags: ['Node.js', 'Express', 'MongoDB', 'TypeScript'],
   },
   {
     name: 'КупиПодариДай в Docker',
