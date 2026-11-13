@@ -47,6 +47,7 @@ module.exports = async function (eleventyConfig) {
   // Vite копирует в итоговую сборку только свою папку public
   eleventyConfig.addPassthroughCopy({
     'src/resources/icons': 'public/icons',
+    'src/resources/demos': 'public/demos',
   });
 
   eleventyConfig.addLayoutAlias('base', 'base.njk');
